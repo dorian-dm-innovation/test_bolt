@@ -3,31 +3,42 @@ import { CommonModule } from '@angular/common';
 import { NavbarComponent } from '../../shared/navbar/navbar.component';
 import { HeroComponent } from '../../shared/hero/hero.component';
 import { FooterComponent } from '../../shared/footer/footer.component';
+import { FeaturesComponent } from '../../shared/features/features.component';
+import { ExpertCommitteeComponent } from '../../shared/expert-committee/expert-committee.component';
+import { TrustDatabaseComponent } from '../../shared/trust-database/trust-database.component';
+import { TestimonialsComponent } from '../../shared/testimonials/testimonials.component';
+import { CtaComponent } from '../../shared/cta/cta.component';
+import { DetailsSectionComponent } from '../../shared/details-section/details-section.component';
+import { NewsletterComponent } from '../../shared/newsletter/newsletter.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, NavbarComponent, HeroComponent, FooterComponent],
+  imports: [
+    CommonModule, 
+    NavbarComponent, 
+    HeroComponent, 
+    FooterComponent,
+    FeaturesComponent,
+    ExpertCommitteeComponent,
+    TrustDatabaseComponent,
+    TestimonialsComponent,
+    CtaComponent,
+    DetailsSectionComponent,
+    NewsletterComponent
+  ],
   template: `
     <div class="min-h-screen">
       <app-navbar></app-navbar>
       <main class="space-y-4 sm:space-y-8">
         <app-hero></app-hero>
-        
-        <!-- Placeholder sections - to be implemented -->
-        <section class="py-16 bg-gradient-to-b from-pulse-950 to-pulse-900 text-white">
-          <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-8">Fonctionnalités</h2>
-            <p class="text-center text-gray-300">Les autres sections seront implémentées progressivement...</p>
-          </div>
-        </section>
-        
-        <section class="py-16 bg-gradient-to-b from-pulse-900 to-pulse-950 text-white">
-          <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-8">Comité d'experts</h2>
-            <p class="text-center text-gray-300">Section en cours de développement...</p>
-          </div>
-        </section>
+        <app-features></app-features>
+        <app-expert-committee></app-expert-committee>
+        <app-trust-database></app-trust-database>
+        <app-testimonials></app-testimonials>
+        <app-cta></app-cta>
+        <app-details-section></app-details-section>
+        <app-newsletter></app-newsletter>
       </main>
       <app-footer></app-footer>
     </div>
